@@ -1,0 +1,467 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   HTML & BODY
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #E3F1FB;
+    color: #2e3e5c;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.wrap_navbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(227, 241, 251, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    border-bottom: 2px dashed #99C3E4;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #1d4ed8;
+    font-weight: 700;
+    margin: 0;
+}
+
+.navbar-nav a {
+    font-weight: 600;
+    color: #475569 !important;
+    margin-left: 1.5rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav a:hover {
+    color: #1d4ed8 !important;
+}
+
+.navbar-nav a.active {
+    color: #1d4ed8 !important;
+}
+
+.navbar-toggler-custom {
+    border: none;
+}
+
+.navbar-toggler-custom:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-custom span {
+    color: #1d4ed8;
+    font-size: 1.5rem;
+}
+
+
+/* ========================================
+   HERO / HOMEPAGE
+======================================== */
+
+.hero-section {
+    padding-top: 8rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+/* ========================================
+   STACKED TITLE
+======================================== */
+
+.stacked-title-container {
+    position: relative;
+    margin-bottom: 2rem;
+    min-height: 250px;
+}
+
+.text-outline-bg {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(29, 78, 216, 0.15);
+    line-height: 0.9;
+    text-transform: lowercase;
+    user-select: none;
+}
+
+.main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    line-height: 1.05;
+    z-index: 2;
+}
+
+/* ========================================
+   CREATIVE TAG
+======================================== */
+
+.creative-tag {
+    background-color: #FFF9E6;
+    color: #1d4ed8;
+    padding: 2px 12px;
+    font-weight: 700;
+    border: 2px solid #1d4ed8;
+    font-size: 0.9rem;
+    display: inline-block;
+    transform: rotate(-3deg);
+    margin-top: 10px;
+    box-shadow: 3px 3px 0px #1d4ed8;
+}
+
+
+/* ========================================
+   ASAL / SUBTITLE
+======================================== */
+
+.asal h3 {
+    color: #475569;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+
+/* ========================================
+   POLAROID
+======================================== */
+
+.polaroid-container {
+    background-color: white;
+    padding: 15px 15px 45px 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+    max-width: 340px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.polaroid-container:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid-container.about-photo {
+    transform: rotate(-3deg);
+}
+
+.polaroid-container.about-photo:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background-color: #f1f5f9;
+}
+
+.polaroid-caption {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #1d4ed8;
+    text-align: left;
+}
+
+
+/* ========================================
+   STICKER STAR
+======================================== */
+
+.sticker-star {
+    position: absolute;
+    color: #1d4ed8;
+    font-size: 1.8rem;
+    animation: spin 10s linear infinite;
+}
+
+.sticker-star-one {
+    top: 15%;
+    left: 5%;
+}
+
+.sticker-star-two {
+    bottom: 20%;
+    right: 8%;
+    animation-delay: 2s;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ========================================
+   NOTEBOOK CARD
+======================================== */
+
+.card-notebook {
+    background-color: white;
+    border: 2px solid #99C3E4;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 5px 5px 0px #99C3E4;
+
+    background-image:
+        linear-gradient(
+            rgba(153, 195, 228, 0.15) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(153, 195, 228, 0.15) 1px,
+            transparent 1px
+        );
+
+    background-size: 20px 20px;
+
+    transition: all 0.3s ease;
+}
+
+.card-notebook:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+
+/* ========================================
+   FOLDER TAB
+======================================== */
+
+.folder-tab {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: -2px;
+    letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.tombol a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 24px;
+    background-color: #1d4ed8;
+    border: 2px solid #1d4ed8;
+    font-weight: 700;
+    border-radius: 0;
+    display: inline-block;
+    box-shadow: 4px 4px 0px #FFF9E6;
+    transition: 0.2s ease;
+}
+
+.tombol a:hover {
+    background-color: #FFF9E6;
+    color: #1d4ed8;
+    box-shadow: 4px 4px 0px #1d4ed8;
+}
+
+
+/* ========================================
+   BADGE
+======================================== */
+
+.badge-scrap {
+    background-color: #FFF9E6;
+    color: #1d4ed8;
+    border: 1px solid #1d4ed8;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+
+/* ========================================
+   SECTION
+======================================== */
+
+.section-padding {
+    padding: 7rem 0 3rem 0;
+}
+
+.section-title-creative {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    margin-bottom: 2.5rem;
+    text-transform: lowercase;
+}
+
+
+/* ========================================
+   INFO LIST
+======================================== */
+
+.info-scrap-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-scrap-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.info-scrap-list i {
+    color: #1d4ed8;
+    width: 20px;
+}
+
+
+/* ========================================
+   BLUE TITLE
+======================================== */
+
+.blue-title {
+    color: #1d4ed8;
+}
+
+
+/* ========================================
+   FADE IN ANIMATION
+======================================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+
+    .text-outline-bg {
+        font-size: 4rem;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .navbar-nav a {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+}@media (max-width: 991px) {
+
+    .stacked-title-container {
+        min-height: 210px;
+    }
+
+    .text-outline-bg {
+        font-size: 4rem;
+    }
+
+    .main-title {
+        font-size: 3.3rem;
+    }
+
+    .navbar-nav a {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .wrap_navbar {
+        padding: 1rem;
+    }
+
+    .hero-section {
+        padding-top: 7rem;
+    }
+
+    .text-outline-bg {
+        font-size: 2.8rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+        top: 15px;
+    }
+
+    .creative-tag {
+        font-size: 0.75rem;
+    }
+
+    .asal h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-padding {
+        padding: 5rem 0 2rem 0;
+    }
+
+    .section-title-creative {
+        font-size: 2rem;
+    }
+
+    .polaroid-container {
+        max-width: 300px;
+    }
+}
